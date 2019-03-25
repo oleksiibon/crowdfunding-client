@@ -1,0 +1,29 @@
+<mat-card>
+  <h3>{{goal.name}}</h3>
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    <img mat-card-image src="{{goal.picture}}" alt="">
+    <div class="cost-info">
+      <div class="progress-bar-and-cost">
+        <div class="progress-bar">
+          <div class="progress-row" [ngStyle]="{'width': progress}">
+            {{goal.collect*100/goal.cost}} %
+          </div>
+        </div>
+        {{goal.cost}}
+      </div>
+      <p id ="have-cost">
+        <mat-label>Have now: </mat-label>
+        {{goal.collect}}
+      </p>
+    </div>
+    <p>
+      <mat-label>Category: </mat-label>
+      {{goal.category}}
+    </p>
+    <mat-card-actions>
+      <button mat-button [color]="'primary'">View</button>
+      <button mat-button [color]="'primary'">Donate</button>
+    </mat-card-actions>
+  </mat-card-content>
+</mat-card>

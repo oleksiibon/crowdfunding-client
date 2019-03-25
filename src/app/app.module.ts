@@ -8,7 +8,7 @@ import { CallbackComponent } from './components/callback/callback.component';
 import {FormsModule} from '@angular/forms';
 import {
   MatButtonModule,
-  MatCardModule,
+  MatCardModule, MatDividerModule,
   MatFormFieldModule,
   MatIconModule,
   MatInputModule,
@@ -17,12 +17,14 @@ import {
 } from '@angular/material';
 import { GoalFormComponent } from './components/goal-form/goal-form.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { GoalCardComponent } from './components/goal-card/goal-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CallbackComponent,
     GoalFormComponent,
+    GoalCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     MatCardModule,
     MatOptionModule,
-    MatSelectModule
+    MatSelectModule,
+    MatDividerModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

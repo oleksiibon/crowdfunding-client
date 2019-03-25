@@ -1,0 +1,47 @@
+.progress-row {
+  background-color: green;
+  text-align: center;
+}
+
+.progress-bar {
+  width: 95%;
+  background-color: whitesmoke;
+  border: black solid 1px;
+  display: inline-block;
+}
+
+.cost-info {
+  width: 100%;
+}
+
+#have-cost {
+  text-align: center;
+}
+
+mat-card {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.progress-bar-and-cost{
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+}
+mat-card-actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+mat-card-content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+img {
+  width: 100%;
+  margin: 0;
+}
