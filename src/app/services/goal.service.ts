@@ -1,0 +1,16 @@
+import { Injectable } from '@angular/core';
+import {HttpClient} from "@angular/common/http";
+import {Observable} from "rxjs";
+import {Goal} from '../domain/Goal';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class GoalService {
+  private goalUrl = 'http://localhost:8080/api/private/goal';
+  constructor(private http: HttpClient) { }
+
+  getGoals(): Observable<object> {
+    return this.http.get(this.goalUrl, {headers: {"Authorization" : "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IlFVWkNSak0zTVVZeU0wUkNPRGxFTlRWQlJERTRSamt4UkVKRVJERTVRalkzUlVNd1FUWXpSQSJ9.eyJnaXZlbl9uYW1lIjoiT2xla3NpaSIsImZhbWlseV9uYW1lIjoiIEJvbmRhciIsIm5pY2tuYW1lIjoib2xla3NpaWJvIiwibmFtZSI6Ik9sZWtzaWkgQm9uZGFyIiwicGljdHVyZSI6Imh0dHBzOi8vbGg1Lmdvb2dsZXVzZXJjb250ZW50LmNvbS8tMGNrRUZoMXJ1VzgvQUFBQUFBQUFBQUkvQUFBQUFBQUFBQUEvQUNIaTNyZnZzb1FTb2Fxa0paM3FXQ19MeXZLSlpKRm5Ndy9tby9waG90by5qcGciLCJsb2NhbGUiOiJydSIsInVwZGF0ZWRfYXQiOiIyMDE5LTAzLTI1VDE0OjI5OjE5LjExM1oiLCJlbWFpbCI6Im9sZWtzaWlib0B0YWhvbWV0ZXIuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImlzcyI6Imh0dHBzOi8vZGV2LWU4ZHgtODBlLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDExMTI3Njk0NzcxNTUyNDE1NzM1MiIsImF1ZCI6IlJsOFZrallRc2xOcE9udkdhaEhES1o5R0F3TEtxM1h3IiwiaWF0IjoxNTUzNTI0MTU5LCJleHAiOjE1NTM1NjAxNTksImF0X2hhc2giOiJoamQ0OFV2ejVWWXRjYkJhbkw5cS1BIiwibm9uY2UiOiJobDlvQWZoaTNwOGp1OW1OeWFsQmlzdDRRcnVZaThyfiJ9.soY88r0rrSuNQj_6iBka8sKoUD4Il_MD4YH2UKrIgLs8jx0aVh87EiLFfBqVCIJ6xqhZoL8AdYFBEkcSTd9CCr5Cv6ffOxb_YrjHw_ObpuwRhNt8svbeZRVZkuJL6qV6yyAasAc_y2cnT37N3UXcOLn9Mes0HsbXy27VE0iDRy4LuPZ-zQl02_wu7YDWzefogy5KG5IEo52ptqOLrb5kCg7sQMnoGhyVYwBM5r_1_UZmLErGqOclk9KEXzqMxgFqh-sO7sqpphmjruwJJoMts-YTUjcKUUskK5vFnE9P9FntxMXrLdjNEmKfNxV8gW-DSdCfgduRpk3zIFB2tS409g"}});
+}
+}

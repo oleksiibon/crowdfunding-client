@@ -18,6 +18,7 @@ import {
 import { GoalFormComponent } from './components/goal-form/goal-form.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { GoalCardComponent } from './components/goal-card/goal-card.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { GoalCardComponent } from './components/goal-card/goal-card.component';
     MatCardModule,
     MatOptionModule,
     MatSelectModule,
-    MatDividerModule
+    MatDividerModule,
+    HttpClientModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
