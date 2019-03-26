@@ -13,4 +13,7 @@ export class GoalService {
   getGoals(): Observable<any> {
     return this.http.get(this.goalUrl);
 }
+  addGoals(goal: Goal): Observable<any> {
+    return this.http.post(this.goalUrl, goal);
+  }
 }

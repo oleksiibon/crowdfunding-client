@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {AuthService} from './auth.service';
 import { CallbackComponent } from './components/callback/callback.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, NgModel} from '@angular/forms';
 import {
   MatButtonModule,
   MatCardModule, MatDividerModule,
@@ -42,7 +42,7 @@ import { GoalListComponent } from './components/goal-list/goal-list.component';
     MatOptionModule,
     MatSelectModule,
     MatDividerModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
