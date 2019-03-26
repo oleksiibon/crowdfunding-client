@@ -19,6 +19,7 @@ import { GoalFormComponent } from './components/goal-form/goal-form.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { GoalCardComponent } from './components/goal-card/goal-card.component';
 import {HttpClientModule} from "@angular/common/http";
+import { GoalListComponent } from './components/goal-list/goal-list.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import {HttpClientModule} from "@angular/common/http";
     CallbackComponent,
     GoalFormComponent,
     GoalCardComponent,
+    GoalListComponent,
   ],
   imports: [
     BrowserModule,

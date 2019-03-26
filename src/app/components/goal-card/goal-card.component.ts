@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Goal} from '../../domain/Goal';
 import {GoalService} from "../../services/goal.service";
 
@@ -8,12 +8,13 @@ import {GoalService} from "../../services/goal.service";
   styleUrls: ['./goal-card.component.css']
 })
 export class GoalCardComponent implements OnInit {
-  goal: Goal = {name: 'Artifact',
-    category: 'Computer game',
-    cost: 500,
-    picture: 'https://upload.wikimedia.org/wikipedia/ru/d/de/Artifact_game.jpg',
-    collect: 10
-  };
+  // goal: Goal = {name: 'Artifact',
+  //   category: 'Computer game',
+  //   cost: 500,
+  //   picture: 'https://upload.wikimedia.org/wikipedia/ru/d/de/Artifact_game.jpg',
+  //   collect: 10
+  // };
+  @Input() goal;
   progress: string;
   constructor(private goalServise: GoalService) { }
 

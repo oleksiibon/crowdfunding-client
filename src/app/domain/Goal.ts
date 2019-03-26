@@ -3,5 +3,5 @@ export interface Goal {
   picture: string;
   cost: number;
   category: string;
-  collect: number;
+  donations: any[];
 }

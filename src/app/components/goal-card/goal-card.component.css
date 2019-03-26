@@ -1,6 +1,8 @@
 .progress-row {
   background-color: green;
   text-align: center;
+  height: 20px;
+  overflow: visible;
 }
 
 .progress-bar {
@@ -8,6 +10,8 @@
   background-color: whitesmoke;
   border: black solid 1px;
   display: inline-block;
+  margin-right: 1%;
+  height: 20px;
 }
 
 .cost-info {
@@ -19,10 +23,11 @@
 }
 
 mat-card {
-  width: 33%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 300px;
+  width: 100%;
 }
 .progress-bar-and-cost{
   display: flex;
@@ -44,4 +49,5 @@ mat-card-content{
 img {
   width: 100%;
   margin: 0;
+  height: 50%;
 }
