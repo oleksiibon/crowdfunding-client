@@ -1,3 +1,37 @@
+<form #form="ngForm" (ngSubmit)="submit(form)">
+  <mat-form-field>
+    <mat-label>Category</mat-label>
+    <mat-select  name="categoryId" ngModel>
+      <mat-option *ngFor="let category of categories" [value]="category.id">
+        {{category.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Created by</mat-label>
+    <mat-select  name="isUser" ngModel>
+      <mat-option [value]="true">
+        Me
+      </mat-option>
+      <mat-option [value]="false">
+        All user
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Done</mat-label>
+    <mat-select  name="isDone" ngModel>
+      <mat-option [value]="'done'">
+        Done
+      </mat-option>
+      <mat-option [value]="'!done'">
+        Not done
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-button color="primary">Use</button>
+  <button mat-button color="primary" (click)="clear($event, form)">Clear</button>
+</form>
 <div>
-    <app-goal-card *ngFor="let goal of goals" [goal]="goal"></app-goal-card>
+    <app-goal-card *ngFor="let goal of goals" [goal]="goal" (click)="goTo($event, goal.id)"></app-goal-card>
 </div>

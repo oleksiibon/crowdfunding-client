@@ -16,7 +16,7 @@ export interface Category {
 })
 
 export class GoalFormComponent implements OnInit {
-  userId = 0;
+  userId = 1;
   categories: Array<Category> = [{name: 'Sport', id: 1}, {name: 'Chess', id: 2}];
   constructor(private goalService: GoalService, private categoryService: CategoryService) { }
 

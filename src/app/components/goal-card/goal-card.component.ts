@@ -1,4 +1,13 @@
-import {AfterContentInit, AfterViewInit, Component, DoCheck, Input, OnChanges, OnInit} from '@angular/core';
+import {
+  AfterContentInit,
+  AfterViewChecked,
+  AfterViewInit,
+  Component,
+  DoCheck,
+  Input,
+  OnChanges,
+  OnInit
+} from '@angular/core';
 import {Goal} from '../../domain/Goal';
 import {GoalService} from "../../services/goal.service";
 

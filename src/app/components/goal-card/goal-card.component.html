@@ -6,9 +6,8 @@
     <div class="cost-info">
       <div class="progress-bar-and-cost">
         <div class="progress-bar">
-          <div class="progress-row" [ngStyle]="{'width': progress}">
-            {{ percent}} %
-          </div>
+          <div class="progress-row" [ngStyle]="{'width': progress}"></div>
+          <span>{{ percent}} %</span>
         </div>
         {{goal.cost}}
       </div>

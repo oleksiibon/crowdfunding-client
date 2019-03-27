@@ -1,27 +1,29 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
 import {AuthService} from './auth.service';
-import { CallbackComponent } from './components/callback/callback.component';
-import {FormsModule, NgModel} from '@angular/forms';
+import {CallbackComponent} from './components/callback/callback.component';
+import {FormsModule} from '@angular/forms';
 import {
   MatButtonModule,
-  MatCardModule, MatDividerModule,
+  MatCardModule,
+  MatDividerModule,
   MatFormFieldModule,
   MatIconModule,
   MatInputModule,
-  MatOptionModule,
-  MatSelectModule, MatSidenavModule
+  MatOptionModule, MatProgressSpinnerModule,
+  MatSelectModule,
+  MatSidenavModule
 } from '@angular/material';
-import { GoalFormComponent } from './components/goal-form/goal-form.component';
+import {GoalFormComponent} from './components/goal-form/goal-form.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { GoalCardComponent } from './components/goal-card/goal-card.component';
+import {GoalCardComponent} from './components/goal-card/goal-card.component';
 import {HttpClientModule} from "@angular/common/http";
-import { GoalListComponent } from './components/goal-list/goal-list.component';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { FullGoalComponent } from './full-goal/full-goal.component';
+import {GoalListComponent} from './components/goal-list/goal-list.component';
+import {SidebarComponent} from './components/sidebar/sidebar.component';
+import {FullGoalComponent} from './components/full-goal/full-goal.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,8 @@ import { FullGoalComponent } from './full-goal/full-goal.component';
     MatSelectModule,
     MatDividerModule,
     HttpClientModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatProgressSpinnerModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

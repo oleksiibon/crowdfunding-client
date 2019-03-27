@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {GoalService} from "../services/goal.service";
-import {Goal} from "../domain/Goal";
+import {GoalService} from "../../services/goal.service";
+import {Goal} from "../../domain/Goal";
 import {NgForm} from "@angular/forms";
-import {DonateService} from "../services/donate.service";
+import {DonateService} from "../../services/donate.service";
+import {Donation} from "../../domain/Donation";
 
 @Component({
   selector: 'app-full-goal',
@@ -29,11 +30,11 @@ export class FullGoalComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
-    const donate: object = {};
-    donate.date = new Date();
-    donate.userId = 0;
-    donate.goalId = this.goalId;
-    donate.amount = form.value.amount;
-    this.donateService.send(donate).subscribe(() => this.goal.collect += +form.value.amount);
+    const donation: Donation = new Donation();
+    donation.date = new Date();
+    donation.userId = 0;
+    donation.goalId = this.goalId;
+    donation.amount = form.value.amount;
+    this.donateService.send(donation).subscribe(() => this.goal.collect += +form.value.amount);
   }
 }

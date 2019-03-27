@@ -14,7 +14,11 @@
   height: 20px;
   overflow: hidden;
 }
-
+.progress-bar > span {
+  position: relative;
+  bottom: 18px;
+  left: 40%
+}
 .cost-info {
   width: 100%;
 }

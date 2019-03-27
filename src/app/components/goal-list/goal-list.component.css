@@ -10,3 +10,7 @@ app-goal-card {
   margin: auto;
   height: 300px;
 }
+
+mat-form-field {
+  margin: 10px;
+}

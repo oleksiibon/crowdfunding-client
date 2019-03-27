@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import * as auth0 from 'auth0-js';
+import {HttpClient} from "@angular/common/http";
 
 @Injectable()
 export class AuthService {
@@ -17,7 +18,7 @@ export class AuthService {
     scope: 'openid profile email'
   });
 
-  constructor(public router: Router) {
+  constructor(public router: Router, private http: HttpClient) {
     this._idToken = '';
     this._accessToken = '';
     this._expiresAt = 0;
@@ -36,15 +37,15 @@ export class AuthService {
   }
   public handleAuthentication(): void {
     this.auth0.parseHash((err, authResult) => {
-      console.log(err);
       console.log(authResult);
       this.getInfo();
       if (authResult && authResult.accessToken && authResult.idToken) {
         window.location.hash = '';
         this.localLogin(authResult);
-        this.router.navigate(['/home']);
+        this.http.post('http://localhost:8080/api/auth', {idToken: authResult.idToken}).subscribe();
+        //this.router.navigate(['/home']);
       } else if (err) {
-        this.router.navigate(['/home']);
+        //this.router.navigate(['/home']);
         console.log(err);
       }
     });
