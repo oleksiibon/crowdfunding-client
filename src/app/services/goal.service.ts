@@ -16,4 +16,7 @@ export class GoalService {
   addGoals(goal: Goal): Observable<any> {
     return this.http.post(this.goalUrl, goal);
   }
+  getGoal(goalId: number): Observable<any> {
+    return this.http.get(this.goalUrl + '/' + goalId);
+  }
 }

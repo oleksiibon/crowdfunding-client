@@ -1,0 +1,20 @@
+.full-goal-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.goal-card {
+  width: 50%;
+}
+
+app-goal-card {
+  height: 500px;
+}
+
+mat-card {
+  width: 35%;
+}
+mat-card-actions {
+  display: flex;
+  justify-content: space-around;
+}

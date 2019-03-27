@@ -8,4 +8,5 @@ div {
 app-goal-card {
   width: 18%;
   margin: auto;
+  height: 300px;
 }

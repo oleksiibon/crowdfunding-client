@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {AfterContentInit, AfterViewInit, Component, DoCheck, Input, OnChanges, OnInit} from '@angular/core';
 import {Goal} from '../../domain/Goal';
 import {GoalService} from "../../services/goal.service";
 
@@ -7,7 +7,7 @@ import {GoalService} from "../../services/goal.service";
   templateUrl: './goal-card.component.html',
   styleUrls: ['./goal-card.component.css']
 })
-export class GoalCardComponent implements OnInit {
+export class GoalCardComponent implements AfterViewInit, DoCheck {
   // goal: Goal = {name: 'Artifact',
   //   category: 'Computer game',
   //   cost: 500,
@@ -16,11 +16,20 @@ export class GoalCardComponent implements OnInit {
   // };
   @Input() goal;
   progress: string;
+  percent: any;
   constructor(private goalServise: GoalService) { }
 
-  ngOnInit() {
-    this.progress = (this.goal.collect * 100 / this.goal.cost) +  '%';
-    this.goalServise.getGoals().subscribe();
+  ngAfterViewInit() {
+    this.getProgressAndPercent();
   }
 
+  ngDoCheck() {
+    console.log('changes');
+    this.getProgressAndPercent();
+  }
+
+  getProgressAndPercent() {
+    this.progress = (this.goal.collect * 100 / this.goal.cost) +  '%';
+    this.percent = Math.floor(this.goal.collect * 100 / this.goal.cost);
+  }
 }

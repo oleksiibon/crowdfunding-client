@@ -7,7 +7,7 @@
       <div class="progress-bar-and-cost">
         <div class="progress-bar">
           <div class="progress-row" [ngStyle]="{'width': progress}">
-            {{goal.collect*100/goal.cost}} %
+            {{ percent}} %
           </div>
         </div>
         {{goal.cost}}
@@ -21,9 +21,5 @@
       <mat-label>Category: </mat-label>
       {{goal.category}}
     </p>
-    <mat-card-actions>
-      <button mat-button [color]="'primary'">View</button>
-      <button mat-button [color]="'primary'">Donate</button>
-    </mat-card-actions>
   </mat-card-content>
 </mat-card>

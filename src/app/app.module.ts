@@ -13,13 +13,15 @@ import {
   MatIconModule,
   MatInputModule,
   MatOptionModule,
-  MatSelectModule
+  MatSelectModule, MatSidenavModule
 } from '@angular/material';
 import { GoalFormComponent } from './components/goal-form/goal-form.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { GoalCardComponent } from './components/goal-card/goal-card.component';
 import {HttpClientModule} from "@angular/common/http";
 import { GoalListComponent } from './components/goal-list/goal-list.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { FullGoalComponent } from './full-goal/full-goal.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { GoalListComponent } from './components/goal-list/goal-list.component';
     GoalFormComponent,
     GoalCardComponent,
     GoalListComponent,
+    SidebarComponent,
+    FullGoalComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,6 +47,7 @@ import { GoalListComponent } from './components/goal-list/goal-list.component';
     MatSelectModule,
     MatDividerModule,
     HttpClientModule,
+    MatSidenavModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
