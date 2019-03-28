@@ -8,8 +8,8 @@ import {
   OnChanges,
   OnInit
 } from '@angular/core';
-import {Goal} from '../../domain/Goal';
-import {GoalService} from "../../services/goal.service";
+import {Goal} from '../../../domain/Goal';
+import {GoalService} from '../../../services/goal.service';
 
 @Component({
   selector: 'app-goal-card',

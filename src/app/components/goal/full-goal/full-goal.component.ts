@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {GoalService} from "../../services/goal.service";
-import {Goal} from "../../domain/Goal";
-import {NgForm} from "@angular/forms";
-import {DonateService} from "../../services/donate.service";
-import {Donation} from "../../domain/Donation";
+import {GoalService} from '../../../services/goal.service';
+import {Goal} from '../../../domain/Goal';
+import {NgForm} from '@angular/forms';
+import {DonateService} from '../../../services/donate.service';
+import {Donation} from '../../../domain/Donation';
 
 @Component({
   selector: 'app-full-goal',

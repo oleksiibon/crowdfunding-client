@@ -1,36 +1,7 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Crowdfunding</a>
-
-      <button
-        mat-button
-        routerLink="/">
-        Home
-      </button>
-
-      <button
-        mat-button
-        *ngIf="!auth.isAuthenticated()"
-        (click)="auth.login()">
-        Log In
-      </button>
-
-      <button
-        mat-button
-        *ngIf="auth.isAuthenticated()"
-        (click)="auth.logout()">
-        Log Out
-      </button>
-
-    </div>
-  </div>
-</nav>
-
-
-
+<div class="navbar">
+  <app-navbar></app-navbar>
+</div>
 <main class="container">
-  <app-sidebar></app-sidebar>
   <div class="router">
     <router-outlet></router-outlet>
   </div>

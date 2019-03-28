@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {NgForm} from "@angular/forms";
-import {GoalService} from "../../services/goal.service";
-import {Goal} from "../../domain/Goal";
-import {CategoryService} from "../../services/category.service";
+import {NgForm} from '@angular/forms';
+import {GoalService} from '../../../services/goal.service';
+import {Goal} from '../../../domain/Goal';
+import {CategoryService} from '../../../services/category.service';
 
 export interface Category {
   name: string;

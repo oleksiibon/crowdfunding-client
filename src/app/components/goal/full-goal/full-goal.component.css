@@ -1,14 +1,15 @@
 .full-goal-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
+  margin: 20px;
 }
 .goal-card {
   width: 50%;
 }
 
 app-goal-card {
-  height: 800px;
+  height: 600px;
 }
 
 mat-card {

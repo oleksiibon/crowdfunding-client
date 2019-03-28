@@ -1,0 +1,25 @@
+<div class="full-goal-wrapper">
+  <div class="goal-card">
+    <app-goal-card [goal]="goal"></app-goal-card>
+  </div>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Description</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        {{goal.description}}
+      </p>
+    </mat-card-content>
+      <mat-card-actions>
+      <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+        <mat-form-field appearance="outline">
+          <mat-label>Amount:</mat-label>
+          <input matInput placeholder="Amount" name="amount" ngModel>
+        </mat-form-field>
+        <button mat-button [color]="'primary'">Donate</button>
+      </form>
+    </mat-card-actions>
+  </mat-card>
+</div>
+

@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {GoalService} from '../../services/goal.service';
-import {CategoryService} from "../../services/category.service";
-import {Category} from "../../domain/Category";
-import {NgForm} from "@angular/forms";
-import {Router} from "@angular/router";
+import {GoalService} from '../../../services/goal.service';
+import {CategoryService} from '../../../services/category.service';
+import {Category} from '../../../domain/Category';
+import {NgForm} from '@angular/forms';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-goal-list',

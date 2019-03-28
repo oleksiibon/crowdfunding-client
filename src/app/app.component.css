@@ -1,6 +1,7 @@
 .container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 app-sidebar {
@@ -9,4 +10,7 @@ app-sidebar {
 
 .router {
   width: 88%;
+}
+
+app-navbar {
 }

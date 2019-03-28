@@ -4,7 +4,7 @@ import * as auth0 from 'auth0-js';
 import {HttpClient} from "@angular/common/http";
 
 @Injectable()
-export class AuthService {
+export class Auth1Service {
 
   private _idToken: string;
   private _accessToken: string;

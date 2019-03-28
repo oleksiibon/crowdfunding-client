@@ -6,9 +6,15 @@ div {
 }
 
 app-goal-card {
-  width: 18%;
-  margin: auto;
+  /*width: 18%;*/
+  width: 250px;
+  margin: 10px 20px;
   height: 300px;
+  cursor: pointer;
+}
+
+app-goal-card:hover {
+  transform: scale(1.05);
 }
 
 mat-form-field {

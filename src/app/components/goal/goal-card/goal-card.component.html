@@ -1,8 +1,14 @@
 <mat-card>
-  <h3>{{goal.name}}</h3>
-  <mat-divider></mat-divider>
+  <mat-card-header>
+    <mat-card-title>
+      {{goal.name}}
+    </mat-card-title>
+    <mat-card-subtitle>
+      {{goal.category}}
+    </mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="{{goal.picture}}" alt="">
   <mat-card-content>
-    <img mat-card-image src="{{goal.picture}}" alt="">
     <div class="cost-info">
       <div class="progress-bar-and-cost">
         <div class="progress-bar">
@@ -16,9 +22,5 @@
         {{goal.collect}}
       </p>
     </div>
-    <p>
-      <mat-label>Category: </mat-label>
-      {{goal.category}}
-    </p>
   </mat-card-content>
 </mat-card>
