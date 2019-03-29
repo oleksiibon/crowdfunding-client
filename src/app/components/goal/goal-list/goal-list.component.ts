@@ -19,13 +19,11 @@ export class GoalListComponent implements OnInit {
 
   ngOnInit() {
     this.goalService.getGoals().subscribe(data => {
-      console.log(data);
       const goalsDTO = [];
       data.forEach(data1 => {
         let collect = 0;
         data1.donations.forEach((a) => collect += +a.amount);
         data1.collect = collect;
-        console.log(data1.category);
         data1.categoryId = data1.category.id;
         data1.category = data1.category.name;
         goalsDTO.push(data1);

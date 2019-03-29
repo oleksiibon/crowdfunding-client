@@ -26,14 +26,13 @@ export class GoalCardComponent implements AfterViewInit, DoCheck {
   @Input() goal;
   progress: string;
   percent: any;
-  constructor(private goalServise: GoalService) { }
+  constructor() { }
 
   ngAfterViewInit() {
     this.getProgressAndPercent();
   }
 
   ngDoCheck() {
-    console.log('changes');
     this.getProgressAndPercent();
   }
 
