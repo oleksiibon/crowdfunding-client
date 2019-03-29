@@ -7,7 +7,7 @@ import {Auth1Service} from './auth1.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'client';
+  title = 'Crowdfunding';
   constructor() {
   }
 

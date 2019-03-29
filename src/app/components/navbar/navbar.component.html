@@ -1,13 +1,24 @@
 <mat-toolbar color="primary">
-  <mat-menu #appMenu="matMenu">
-    <button mat-menu-item (click)="goTo('/goals')">Goals</button>
-    <button mat-menu-item (click)="goTo('/add-goal')">Add goal</button>
-  </mat-menu>
+  <div class="left-wrapper">
+    <mat-menu #appMenu="matMenu">
+      <button mat-menu-item (click)="goTo('/goals')">Goals</button>
+      <button mat-menu-item (click)="goTo('/add-goal')">Add goal</button>
+    </mat-menu>
 
-  <button mat-button [matMenuTriggerFor]="appMenu">
-    Goal
-  </button>
-  <button mat-button (click)="goTo('/bakers/top')">
-    Top bakers
-  </button>
+    <button mat-button [matMenuTriggerFor]="appMenu">
+      Goal
+    </button>
+    <button mat-button (click)="goTo('/bakers/top')">
+      Top bakers
+    </button>
+  </div>
+  <div class="right-wrapper">
+    <mat-menu #profileMenu="matMenu">
+      <button mat-menu-item (click)="goTo('/profile')">Account: {{baker.name}}</button>
+      <button mat-menu-item (click)="goTo('/deposit')">Balance: {{baker.balance}}</button>
+    </mat-menu>
+    <button mat-button [matMenuTriggerFor]="profileMenu">
+      Profile
+    </button>
+  </div>
 </mat-toolbar>

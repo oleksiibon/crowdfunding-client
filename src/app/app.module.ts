@@ -28,6 +28,7 @@ import { LoginComponent } from './components/login/login.component';
 import {JwtInterceptor} from "./interceptors/jwt.interceptor";
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { BakersTopComponent } from './components/bakers-top/bakers-top.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { BakersTopComponent } from './components/bakers-top/bakers-top.component
     LoginComponent,
     NavbarComponent,
     BakersTopComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,

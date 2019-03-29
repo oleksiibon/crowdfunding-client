@@ -26,11 +26,14 @@ export class GoalFormComponent implements OnInit {
     });
   }
   onSubmit(f: NgForm) {
-    const goal: Goal = f.value;
-    goal.creatorId = this.userId;
-    this.goalService.addGoals(goal).subscribe(data => {
-      console.log(data);
-    });
+    if (f.valid) {
+      const goal: Goal = f.value;
+      goal.creatorId = localStorage.getItem('username');
+      this.goalService.addGoals(goal).subscribe(data => {
+        console.log(data);
+        f.resetForm();
+      });
+    }
   }
 
   reset($event: MouseEvent, f: NgForm) {

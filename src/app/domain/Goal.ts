@@ -3,5 +3,5 @@ export interface Goal {
   picture: string;
   cost: number;
   categoryId: number;
-  creatorId: number;
+  creatorId: string;
 }

@@ -1,6 +1,6 @@
 export class Donation {
   date: Date;
-  userId: number;
+  userId: string;
   goalId: number;
   amount: number;
 }

@@ -9,32 +9,32 @@
       <p>
         <mat-form-field appearance="outline">
           <mat-label>Name: </mat-label>
-          <input matInput placeholder="Name" name="name" ngModel>
+          <input matInput placeholder="Name" name="name" ngModel required>
         </mat-form-field>
       </p>
       <p>
         <mat-form-field appearance="outline">
           <mat-label>Cost:</mat-label>
-          <input matInput placeholder="Cost" name="cost" ngModel>
+          <input matInput placeholder="Cost" name="cost" ngModel required>
         </mat-form-field>
       </p>
       <p>
         <mat-form-field appearance="outline">
           <mat-label>Picture:</mat-label>
-          <input matInput placeholder="Picture" name="picture" ngModel>
+          <input matInput placeholder="Picture" name="picture" ngModel required>
         </mat-form-field>
       </p>
       <p>
         <mat-form-field appearance="outline">
           <mat-label>Description:</mat-label>
-          <textarea matInput placeholder="Description" name="description" ngModel></textarea>
+          <textarea matInput placeholder="Description" name="description" ngModel required></textarea>
         </mat-form-field>
       </p>
       <p>
         <mat-form-field>
           <mat-label>Category</mat-label>
-          <mat-select  name="categoryId" ngModel>
-            <mat-option *ngFor="let category of categories" [value]="category.id">
+          <mat-select  name="categoryId" ngModel required>
+            <mat-option *ngFor="let category of categories" [value]="category.id" >
               {{category.name}}
             </mat-option>
           </mat-select>

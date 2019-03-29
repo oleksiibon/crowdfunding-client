@@ -1,7 +1,10 @@
 <form #form="ngForm" (ngSubmit)="submit(form)">
   <mat-form-field>
     <mat-label>Period</mat-label>
-    <mat-select  name="isUser" ngModel>
+    <mat-select  name="filter" ngModel>
+      <mat-option [value]="'day'">
+        Day
+      </mat-option>
       <mat-option [value]="'month'">
         Month
       </mat-option>

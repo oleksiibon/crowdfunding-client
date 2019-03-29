@@ -7,6 +7,7 @@ import {GoalListComponent} from './components/goal/goal-list/goal-list.component
 import {FullGoalComponent} from './components/goal/full-goal/full-goal.component';
 import {LoginComponent} from './components/login/login.component';
 import {BakersTopComponent} from './components/bakers-top/bakers-top.component';
+import {ProfileComponent} from './profile/profile.component';
 
 const routes: Routes = [
   {path: 'callback', component: CallbackComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'goal/:id', component: FullGoalComponent},
   {path: 'goals', component: GoalListComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'bakers/top', component: BakersTopComponent}
+  {path: 'bakers/top', component: BakersTopComponent},
+  {path: 'profile', component: ProfileComponent}
 ];
 
 @NgModule({

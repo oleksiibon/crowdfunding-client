@@ -32,9 +32,12 @@ export class FullGoalComponent implements OnInit {
   onSubmit(form: NgForm) {
     const donation: Donation = new Donation();
     donation.date = new Date();
-    donation.userId = 0;
+    donation.userId = localStorage.getItem('username');
     donation.goalId = this.goalId;
     donation.amount = form.value.amount;
-    this.donateService.send(donation).subscribe(() => this.goal.collect += +form.value.amount);
+    this.donateService.send(donation).subscribe(() => {
+      this.goal.collect += +form.value.amount;
+      form.resetForm();
+    });
   }
 }
