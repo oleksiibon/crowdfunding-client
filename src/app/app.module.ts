@@ -29,6 +29,7 @@ import {JwtInterceptor} from "./interceptors/jwt.interceptor";
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { BakersTopComponent } from './components/bakers-top/bakers-top.component';
 import { ProfileComponent } from './profile/profile.component';
+import { DonationTableComponent } from './components/donation-table/donation-table.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { ProfileComponent } from './profile/profile.component';
     NavbarComponent,
     BakersTopComponent,
     ProfileComponent,
+    DonationTableComponent,
   ],
   imports: [
     BrowserModule,

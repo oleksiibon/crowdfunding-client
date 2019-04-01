@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {Auth1Service} from "../../auth1.service";
+import {Auth1Service} from '../../auth1.service';
 import {AuthService} from '../../services/auth.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,18 +10,19 @@ import {AuthService} from '../../services/auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private authService: AuthService) {
+  constructor(private authService: AuthService, private router: Router) {
   }
 
   ngOnInit() {
   }
 
-  login() {
-    this.authService.login('aleseyko', '123').subscribe(data => {
+  login(f: HTMLFormElement) {
+    this.authService.login(f.value.login, f.value.password).subscribe(data => {
       console.log(data);
       localStorage.setItem('currentUser', JSON.stringify(data));
       localStorage.setItem('username', this.parseJwt(data.token).sub);
-    });
+      this.router.navigate(['/goals']);
+    }, err => {alert('Something wrong'); });
 
   }
 

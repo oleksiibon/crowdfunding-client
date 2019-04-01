@@ -38,6 +38,8 @@ export class FullGoalComponent implements OnInit {
     this.donateService.send(donation).subscribe(() => {
       this.goal.collect += +form.value.amount;
       form.resetForm();
+    }, err => {
+      alert(err.error);
     });
   }
 }

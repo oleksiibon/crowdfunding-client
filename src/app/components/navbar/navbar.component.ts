@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, DoCheck, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {UserService} from '../../services/user.service';
 import {Baker} from '../../domain/Baker';
@@ -8,8 +8,9 @@ import {Baker} from '../../domain/Baker';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit, DoCheck {
   baker: Baker;
+  isLogin = false;
 
   constructor(private router: Router, private userService: UserService) {
   }
@@ -19,8 +20,21 @@ export class NavbarComponent implements OnInit {
       this.baker = data;
     });
   }
+  ngDoCheck() {
+    if (localStorage.getItem('currentUser') === null) {
+      this.isLogin = false;
+    } else {
+      this.isLogin = true;
+    }
+  }
 
   goTo(path: string) {
     this.router.navigate([path]);
+  }
+
+  logout() {
+    localStorage.removeItem('currentUser');
+    localStorage.removeItem('username');
+    this.goTo('/login');
   }
 }

@@ -16,9 +16,13 @@
     <mat-menu #profileMenu="matMenu">
       <button mat-menu-item (click)="goTo('/profile')">Account: {{baker.name}}</button>
       <button mat-menu-item (click)="goTo('/deposit')">Balance: {{baker.balance}}</button>
+      <button mat-menu-item (click)="logout()">Logout</button>
     </mat-menu>
-    <button mat-button [matMenuTriggerFor]="profileMenu">
+    <button mat-button [matMenuTriggerFor]="profileMenu" *ngIf="isLogin">
       Profile
+    </button>
+    <button mat-button *ngIf="!isLogin" (click)="goTo('/login')">
+      Login
     </button>
   </div>
 </mat-toolbar>

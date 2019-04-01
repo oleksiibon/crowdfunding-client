@@ -1,1 +1,15 @@
-<button (click)="login()">login</button>
+<form #form="ngForm" (submit)="login(form)">
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Login: </mat-label>
+      <input matInput placeholder="Name" name="login" ngModel required>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Password:</mat-label>
+      <input matInput placeholder="Cost" name="password" ngModel required type="password">
+    </mat-form-field>
+  </p>
+  <button color="accent" mat-stroked-button >Login</button>
+</form>
